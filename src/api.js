@@ -27,6 +27,7 @@ export default {
 				})
 			})
 			if(response.status != 200) throw new Error('An error occurred when Open AI API')
+				log(response.data);
 			return response.data.choices[0].message.content;
 		} catch(error) {
 			log(error.message)
