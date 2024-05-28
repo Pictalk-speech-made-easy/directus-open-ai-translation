@@ -1,10 +1,10 @@
 import languages from './languages'
 
 export default {
-	id: 'directus-labs-ai-translation',
+	id: 'open-ai-translation',
 	name: 'AI Translation',
 	icon: 'translate',
-	description: 'Use DeepL\'s APIs to translate text into over 30 languages.',
+	description: 'Use OpenAI\'s APIs to translate text into over 30 languages.',
 	overview: ({ text, target_lang }) => [
 		{
 			label: 'Text',
@@ -18,7 +18,7 @@ export default {
 	options: [
 		{
 			field: 'api_key',
-			name: 'DeepL API Key',
+			name: 'Open AI API Key',
 			type: 'string',
 			required: true,
 			meta: {
@@ -28,28 +28,6 @@ export default {
 					masked: true,
 				},
 			},
-		},
-		{
-			field: 'api_plan',
-			name: 'API Plan',
-			type: 'string',
-			required: true,
-			meta: {
-				width: 'half',
-				interface: 'select-dropdown',
-				options: {
-					choices: [
-						{
-							text: 'Free',
-							value: 'free'
-						},
-						{
-							text: 'Pro',
-							value: 'pro'
-						},
-					]
-				}
-			}
 		},
 		{
 			field: 'text',
