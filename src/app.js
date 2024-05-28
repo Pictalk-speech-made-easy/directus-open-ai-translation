@@ -1,7 +1,7 @@
 import languages from './languages'
 
 export default {
-	id: 'open-ai-translation',
+	id: 'directus-open-ai-translation',
 	name: 'AI Translation',
 	icon: 'translate',
 	description: 'Use OpenAI\'s APIs to translate text into over 30 languages.',

@@ -1,7 +1,7 @@
 import { request, log } from 'directus:api'
 
 export default {
-	id: 'open-ai-translation',
+	id: 'directus-open-ai-translation',
 	handler: async ({ api_key, text, target_lang }) => {
 		try {
 			const url = `https://api.openai.com/v1/chat/completions`
