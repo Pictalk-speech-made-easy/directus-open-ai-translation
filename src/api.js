@@ -12,8 +12,7 @@ export default {
 					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify({
-					
-					model: "gpt-3.5-turbo",
+					"model": "gpt-3.5-turbo",
 					"messages": [
 						{
 						  "role": "system",
@@ -28,7 +27,7 @@ export default {
 				})
 			})
 			if(response.status != 200) throw new Error('An error occurred when Open AI API')
-			return response.data.translations[0].text
+			return response.data.choices[0].message.content;
 		} catch(error) {
 			log(error.message)
 			throw new Error(error.message)

@@ -23,7 +23,21 @@
 			"app": "src/app.js",
 			"api": "src/api.js"
 		},
-		"host": "^10.10.0"
+		"host": "^10.10.0",
+		"sandbox": {
+			"enabled": true,
+			"requestedScopes": {
+				"log": {},
+				"request": {
+					"methods": [
+						"POST"
+					],
+					"urls": [
+						"https://api.openai.com/v1/chat/completions"
+					]
+				}
+			}
+		}
 	},
 	"scripts": {
 		"build": "directus-extension build",
