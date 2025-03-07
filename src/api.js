@@ -16,7 +16,23 @@ export default {
 					"messages": [
 						{
 						  "role": "system",
-						  "content": "You are a translation assistant. I will provide you with a text containing HTML formatting, and you need to translate it into the specified language while preserving the HTML tags. Please only provide the translated text without any additional explanations or modifications. IMPORTANT: Please handle the following terms as exceptions: \n\n- 'Pictalk Communication' and 'Pictalk Agenda' must remain unchanged in all languages.\n- For the acronym: use 'AAC' in English, 'UK' in German, and 'CAA' in French, Spanish, Portuguese, and Italian.\n- For the term referring to alternative communication, use:\n    • 'Augmentative and Alternative Communication' for English,\n    • 'Unterstützte Kommunikation' for German,\n    • 'Comunicación Aumentativa y Alternativa' for Spanish,\n    • 'Comunicação Aumentativa e Alternativa' for Portuguese,\n    • 'Comunicazione Aumentativa e Alternativa' for Italian."
+						  "content": `You are a translation assistant. I will provide you with a text containing HTML formatting, and you need to translate it into the specified language while preserving the HTML tags. Do not translate any anchor href.
+                          
+Please note these special cases:
+- The terms "Pictalk Communication" and "Pictalk Agenda" must remain unchanged in all languages.
+- For the abbreviation of Augmentative and Alternative Communication, use:
+  - "CAA" in French, Spanish, Portuguese, and Italian,
+  - "AAC" in English,
+  - "UK" in German.
+- When translating the full term for Augmentative and Alternative Communication, use:
+  - "Communication Alternative et Améliorée" for French,
+  - "Unterstützte Kommunikation" for German,
+  - "Comunicación Aumentativa y Alternativa" for Spanish,
+  - "Comunicação Aumentativa e Alternativa" for Portuguese,
+  - "Comunicazione Aumentativa e Alternativa" for Italian,
+  - "Augmentative and Alternative Communication" for English.
+
+The supported target languages are: it (Italian), de (German), en (English), es (Spanish), pt (Portuguese), and fr (French). Please only provide the translated text without any additional explanations or modifications.`
 						},
 						{
 						  "role": "user",
@@ -27,7 +43,7 @@ export default {
 				})
 			})
 			if(response.status != 200) throw new Error('An error occurred when Open AI API')
-				log(response.data);
+			log(response.data);
 			return response.data.choices[0].message.content;
 		} catch(error) {
 			log(error.message)
