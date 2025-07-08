@@ -2,7 +2,7 @@
 	"name": "directus-open-ai-translation",
 	"description": "Use Open AI Translation API to translate text into over 30 languages.",
 	"icon": "extension",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"license": "MIT",
 	"keywords": [
 		"directus",
