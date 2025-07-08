@@ -1,7 +1,7 @@
 export default [
     { value: 'BG', text: 'Bulgarian' },
     { value: 'CS', text: 'Czech' },
-    { value: 'DA', text: 'Danish' },
+    { value: 'DK', text: 'Danish' },
     { value: 'DE', text: 'German' },
     { value: 'EL', text: 'Greek' },
     { value: 'EN-GB', text: 'English (British)' },
@@ -17,7 +17,7 @@ export default [
     { value: 'KO', text: 'Korean' },
     { value: 'LT', text: 'Lithuanian' },
     { value: 'LV', text: 'Latvian' },
-    { value: 'NB', text: 'Norwegian (Bokmål)' },
+    { value: 'NO', text: 'Norwegian (Bokmål)' },
     { value: 'NL', text: 'Dutch' },
     { value: 'PL', text: 'Polish' },
     { value: 'PT-BR', text: 'Portuguese (Brazilian)' },
@@ -26,7 +26,7 @@ export default [
     { value: 'RU', text: 'Russian' },
     { value: 'SK', text: 'Slovak' },
     { value: 'SL', text: 'Slovenian' },
-    { value: 'SV', text: 'Swedish' },
+    { value: 'SE', text: 'Swedish' },
     { value: 'TR', text: 'Turkish' },
     { value: 'UK', text: 'Ukrainian' },
     { value: 'ZH', text: 'Chinese (simplified)' }
