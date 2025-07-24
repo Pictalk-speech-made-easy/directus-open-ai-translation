@@ -26,7 +26,9 @@ export default {
 				})
 			})
 			if(response.status != 200) throw new Error('An error occurred when Open AI API')
-			return response.data.choices[0].message.content;
+			const translatedContent = response.data.choices[0].message.content;
+			if (typeof translatedContent === 'object' && translatedContent !== null) return JSON.stringify(translatedContent);
+            return translatedContent;
 		} catch(error) {
 			log(error.message)
 			throw new Error(error.message)
