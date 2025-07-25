@@ -13,6 +13,12 @@ export default {
 				},
 				body: JSON.stringify({
 					"model": "gpt-4.1-nano",
+					"max_output_tokens": 32768,
+					text: {
+						"format": {
+							"type": "json_object"
+						}
+					},
 					"messages": [
 						{
 						  "role": "system",
